@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Diseño y nuevos medios" />
+        <title>&#127909DNO037</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <p><a href="index.html">Portada</a> <a href="peliculas.html">Películas</a> <a href="locaciones.html">Locaciones</a> <a href="ganancias.html" class="active">Ganancias</a></p>
+            </nav>
+            <main>
+                <canvas id="grafico" height="40" width="100">
+                    <!--acá se mete el mapa-->
+                </canvas>
+            </main>
+            <footer>
+                <p><a href="https://github.com/sofialvarez4">Álvarez Sofía</a> <a href="https://sofialvarez4.github.io/dno037-clase-9/">&#127909DNO037</a></p>
+            </footer>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.0/dist/chart.min.js"></script>
+    <script>
+var ctx = document.getElementById('grafico').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Shrek', 'Shrek 2', 'Shrek Tercero', 'Shrek Para Siempre', 'Shrek Ogrorisa la Navidad', 'El Gato con Botas', 'El Gato con Botas 2: El último deseo'],
+        datasets: [{
+            label: 'Dinero recaudado por cada entrega en millones (USD)',
+            data: [487.9, 928.7, 813.4, 752.6, 15.9, 554.7, 3.5],
+            backgroundColor: '#4a5426',
+            borderWidth: 0
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+    </body>
+</html>
